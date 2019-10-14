@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- redirect wala -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- redirect wala / -->
+
+    <style>
+        #shift{
+            background:linear-gradient(#6cb5c1,#54d898);
+            display:none;
+            position:fixed;
+            height:90%;
+            width:90%;
+            margin:5%;
+            color: #ff0!important;
+            z-index:9999999;
+            
+        }
+        .tomir{
+          width:100%;
+        }
+
+    .center{    
+      background: #f0e;
+      color: #fff!important;
+      border-radius: 30px;
+      padding: 10px;
+      clip-path: circle(10% at 88% 18%);
+      transition:.5s ease-in-out;
+
+    }
+    .center:hover{
+      clip-path: circle(100%);
+    }
+    .ss{
+      position: absolute;     
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+
+      border-radius: 35px;
+    }
+    .cpopup{
+      position: absolute;
+      background: blue;
+      color: #fff;
+      padding:20px;
+      cursor: pointer;
+      top:10px;
+      right: 10px;
+      border-radius: 52% 48% 100% 0% / 100% 44% 56% 0% ;
+    }
+
+    .fa-info{
+      position: absolute;
+      right: 10%;
+      top: 11%;
+      color: #0f0;
+
+    }
+    .fa-info:hover {
+      color: blue;
+    }
+    .firstmai{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      height: 100vh;
+      width: 100vh;
+      z-index: 999;
+    }
+    .scss{
+      background: rgba(200,2000,0,0.44);
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: 999;
+    }
+    .c-firstmai{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 200%;
+    }
+    </style>
+
+
+
+    <title>Linux System</title>
+    <link rel="icon" href="img/index.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   
+  </head>
+  <body data-spy="scroll" data-target=".navbar-default" onload="load()">
+    <div class="scss" id='scss'>
+      
+
+      <div class="firstmai-1st firstmai" id="firstmai">            
+            <div class="c-firstmai">                
+                  <svg viewBox="0 0 960 300">
+                    <symbol id="s-text">
+                      <text text-anchor="middle" x="40%" y="60%" class="redirect">loading</text>
+                    </symbol>
+                    <g class = "g-ants">
+                      <use xlink:href="#s-text" class="text-copy"></use>
+                      <use xlink:href="#s-text" class="text-copy"></use>
+                      <use xlink:href="#s-text" class="text-copy"></use>
+                      <use xlink:href="#s-text" class="text-copy"></use>
+                      <use xlink:href="#s-text" class="text-copy"></use>
+                    </g>
+                  </svg>
+            </div>
+          </div>
+    </div>
+
+    <div id="shift" class="animated bounceInUp">
+      <div class="cpopup"><span onclick="document.getElementById('shift').style.display='none';"><i class="fa fa-times" aria-hidden="true"></i>
+</span></div><h4>By me</h4>
+          <div class="ss">
+            <div class="center">
+              <i class="fas fa-info"></i>
+              <h1>hey</h1>
+              <p style="color:#ff0">this is just a pop up you can close it</p>
+
+            </div>
+
+          </div>
+          
+    </div>
+
+    <div class="topmost" id="topmost">
+      <div class="text-center searchh">
+        <div></div>
+      <div class="search-div">
+        <input type="text" placeholder="Search" class="search">
+        
+      </div>
+      <div></div>
+    </div>
+      <img src="img/banner.jpg" alt="thulo-img" height="800" class="img1">
+      <img src="img/banner2.jpg" alt="alisano-img" height="800" class="img2">
+      <img src="img/banner3.jpg" alt="samo-img" height="800" class="img3">
+    </div>
+
+
+
+    <div id="home">
+      <div class="overlay">
+      
+      <nav class="navbar navbar-default navbar-fixed-top nav-hide">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" style="padding-top:15px;"></a>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#distribution">Distribution</a></li>
+        <li><a href="#downloads">Downloads</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container text-center l-inside">
+  <img src="img/logo.png" alt="logo" style="width: 300px;height: 70px;" class="home-logo">
+  <h3>System in you hand ;)</h3>
+  <p><a href="#">Ubuntu</a>, <a href="#">Fedora</a>, <a href="#">Cent os</a>, <a href="#">Kali Linux</a>, <a href="#">Parrot Sec Os</a>, <a href="#">Backbox</a>, <a href="#">Linux Mint</a>, <a href="#"></a>, <a href="#">Ubuntu</a>, <a href="#">Ubuntu</a>, <a href="#">Arch Linux</a>, <a href="#">Damn Small Linux</a>, <a href="#">Elementary OS</a>, <a href="#">Gentoo</a>, <a href="#">Lindows</a>,etc etc etc...
+  </p>
+  <a href="#intro" class="btn button-default aa">Take a Look</a>
+  <br>
+  <a href="#intro" class="aa"><i class="fas fa-angle-down"></i></a>
+</div>
+</div>
+    </div><!--home-->
+    <section id="intro">
+      <div class="container">
+
+        <div class="row" style="border:2px solid #0cb8b6;border-radius: 20px; ">
+          <div class="col-md-6 text-justify col-sm-6">
+            <h2>Introduction </h2>
+            <p><span style="color:var(--primary); font-size: 25px;">Linux</span> was originally developed for personal computers based on the Intel x86 architecture, but has since been ported to more platforms than any other operating system. Because of the dominance of the Linux kernel-based Android OS on smartphones, Linux has the largest installed base of all general-purpose operating systems.[18] Linux is also the leading operating system on servers and other big iron systems such as mainframe computers, and the only OS used on TOP500 supercomputers (since November 2017, having before gradually eliminated all competitors).It is used by around 2.3% of desktop</p>
+            <button onclick="document.getElementById('full-intro').style.display='block'" style="width:auto;" class="full-intro">See Full Intro</button>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <img src="img/banner4.jpg" alt="background" class="img-responsive" style="margin-top: 100px;">
+          </div>
+        </div>
+        <div id="full-intro" class="introduce">
+          <div class="popup-intro animate">
+            <section class="topcontainer">
+              <span onclick="document.getElementById('full-intro').style.display='none'" class="close" title="Close form">&times;
+              </span>
+              <h3>Introduction</h3>
+              
+            </section>
+            <div class="intro-para text-justify">
+                <p style="color:#000;"><span style="font-size: 25px; color: var(--primary);">Linux</span> was originally developed for personal computers based on the Intel x86 architecture, but has since been ported to more platforms than any other operating system. Because of the dominance of the Linux kernel-based Android OS on smartphones, Linux has the largest installed base of all general-purpose operating systems.[18] Linux is also the leading operating system on servers and other big iron systems such as mainframe computers, and the only OS used on TOP500 supercomputers (since November 2017, having before gradually eliminated all competitors).It is used by around 2.3% of desktop computers.The Chromebook, which runs the Linux kernel-based Chrome OS, dominates the US K–12 education market and represents nearly 20% of the sub-$300 notebook sales in the US.Linux also runs on embedded systems—devices whose operating system is typically built into the firmware and is highly tailored to the system. This includes TiVo and similar DVR devices, network routers, facility automation controls, televisions,video game consoles and smartwatches.[26] Many smartphones and tablet computers run Android and other Linux derivatives.</p>
+                <p style="color:#000;">computers.The Chromebook, which runs the Linux kernel-based Chrome OS, dominates the US K–12 education market and represents nearly 20% of the sub-$300 notebook sales in the US.Linux also runs on embedded systems—devices whose operating system is typically built into the firmware and is highly tailored to the system. This includes TiVo and similar DVR devices, network routers, facility automation controls, televisions,video game consoles and smartwatches.[26] Many smartphones and tablet computers run Android and other Linux derivatives.</p>
+
+            </div>
+
+
+          </div>
+        </div> 
+        </div> 
+    </section><!--sections-->
+    <section id="distribution">
+      <div class="container">
+        <h2>Linux Distribution</h2>
+        <p>A Linux distribution (often abbreviated as distro) is an operating system made from a software collection, which is based upon the Linux kernel and, often, a package management system. Linux users usually obtain their operating system by downloading one of the Linux distributions, which are available for a wide variety of systems ranging from embedded devices (for example, OpenWrt) and personal computers (for example, Linux Mint) to powerful supercomputers (for example, Rocks Cluster Distribution).</p>
+
+        <div class="d-image">
+          <div class="d-image-1 d-image-hide d-image-all">
+            <img src="img/distro1.jpg" alt="debian" class="img-responsive tomir">
+            <div class="d-image-overlay">
+              <div class="beeb text-center">
+                <span class="overlay-text animated fadeInLeft">
+                  Debian
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-image-2 d-image-hide d-image-all">
+            <img src="img/distro2.jpg" alt="archlinux" class="img-responsive tomir">
+            <div class="d-image-overlay">
+              <div class="beeb text-center">
+                <span class="overlay-text animated fadeInRight">
+                  Arch Linux
+                </span>
+              </div>
+            </div>
+            
+          </div>
+          <div class="d-image-3 d-image-hide d-image-all">
+            <img src="img/distro3.jpg" alt="centos" class="img-responsive tomir">
+            <div class="d-image-overlay">
+              <div class="beeb text-center">
+                <span class="overlay-text animated zoomIn">
+                  Cent Os
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-image-4 d-image-hide d-image-all">
+            <img src="img/distro11.jpg" alt="linuxmint" class="img-responsive tomir">
+            <div class="d-image-overlay">
+              <div class="beeb text-center">
+                <span class="overlay-text animated flip ubunttu">
+                  Ubuntu
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-image-5 d-image-hide d-image-all">
+            <img src="img/distro10.jpg" alt="ubuntu" class="img-responsive tomir">
+            <div class="d-image-overlay">
+              <div class="beeb text-center">
+                <span class="overlay-text animated lightSpeedIn">
+                  Linux Mint
+                </span>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </section>
+    
+    
+    <section id="downloads">
+      <div class="container text-justify">
+        <div class="dld">
+          <h3>Linux Os download</h3>
+             <p>Kali Linux is a Debian-derived Linux distribution designed for digital forensics and penetration testing. It is maintained and funded by Offensive Security Ltd. Mati Aharoni, Devon Kearns and Raphaël Hertzog are the core developers.<br>
+             Parrot Security OS is a Linux distribution based on Debian with a focus on computer security. It is designed for penetration testing, vulnerability assessment and mitigation, computer forensics and anonymous web browsing.</p>
+             <div class="row">
+          <div class="col-md-3 col-sm-6 zpadd">
+            <div class="thumbnail os-shadow">
+              <img src="img/os/ubuntu.jpg" alt="ubuntu">
+              <h2>Ubuntu <a href="#"><i class="fas fa-cloud-download-alt"></i></a></h2>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 zpadd">
+            <div class="thumbnail os-shadow">
+              <img src="img/os/kali.jpg" alt="kali" class="doctor">
+              <h2>Kali Linux <a href="#"><i class="fas fa-cloud-download-alt"></i></a></h2>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 zpadd">
+            <div class="thumbnail os-shadow">
+              <img src="img/os/parrot.jpg" alt="parrot security os" class="doctor">
+              <h2>Parrot Os <a href="#"><i class="fas fa-cloud-download-alt"></i></a></h2>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 zpadd">
+            <div class="thumbnail os-shadow">
+              <img src="img/os/red-hat.jpg" alt="red hat" class="doctor">
+              <h2>Red Hat <a href="#"><i class="fas fa-cloud-download-alt"></i></a></h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-md-3 col-sm-6 zpadd">
+            <div class="thumbnail os-shadow">
+              <img src="img/os/fedora.jpg" alt="Fedora" class="doctor">
+              <h2>Fedora <a href="#"><i class="fas fa-cloud-download-alt"></i></a></h2>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 zpadd">
+            <div class="thumbnail os-shadow">
+              <img src="img/os/arch-linux.jpg" alt="Arch linux" class="doctor">
+              <h2>Arch Linux <a href="#"><i class="fas fa-cloud-download-alt"></i></a></h2>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 zpadd">
+            <div class="thumbnail os-shadow">
+              <img src="img/os/backbox.jpg" alt="Backbox" class="doctor">
+              <h2>BackBox <a href="#"><i class="fas fa-cloud-download-alt"></i></a></h2>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 zpadd">
+            <div class="thumbnail os-shadow">
+              <img src="img/os/deft.jpg" alt="" class="doctor">
+              <h2>Deft Linux <a href="#"><i class="fas fa-cloud-download-alt"></i></a></h2>
+            </div>
+          </div>
+      </div>
+             
+             <button onclick="document.getElementById('takedown').style.display='block'" style="width:auto;" class="full-intro os-download nav-hide">Download</button>
+             <div id="takedown" class="introduce">
+          <div class="popup-intro animate">
+            <div class="topcontainer">
+              <span onclick="document.getElementById('takedown').style.display='none'" class="close">&times;</span> 
+            </div>
+            <div class="intro-para text-justify">
+              <div class="container">
+                <div class="row">
+                  <svg viewBox="0 0 960 300">
+                    <symbol id="s-text">
+                      <text text-anchor="middle" x="40%" y="60%" class="redirect">Redirecting..</text>
+                    </symbol>
+                    <g class = "g-ants">
+                      <use xlink:href="#s-text" class="text-copy"></use>
+                      <use xlink:href="#s-text" class="text-copy"></use>
+                      <use xlink:href="#s-text" class="text-copy"></use>
+                      <use xlink:href="#s-text" class="text-copy"></use>
+                      <use xlink:href="#s-text" class="text-copy"></use>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="black" id="particles-js">
+        <div class="container">
+          
+          <div class="row text-center">
+            <div class="col-md-5 text-justify">
+              <h2 style="margin-top: 0px; color: #0ff;">
+                Linux Os download and installation guide ...
+              </h2>
+            </div>
+
+            <div class="col-md-6 text-justify">
+               <p>If you encounter any problem downloading any os go to the link given and read the given documentation for proper download and successful installation of linux operating system...</p>
+               <a href="https://www.linux.org/pages/download/" target="_blank" class="help">Help Here</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Facing Any problems! Give us a Feedback</h2>
+            <form method="post" name="facing any problem" data-netlify="true">
+            <input type="text" name="uname" placeholder="Your Name">
+            <input type="email" name="uemail" placeholder="Your Email">
+            <input type="text" name="usubject" placeholder="Subject">
+            <textarea name="umessage" placeholder="Message"></textarea>
+            <button class="btn button-default msg">Send Message</button>
+            </form>
+
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-3 padd10">
+            <h2>Member Login</h2>
+            <form action="index.html" method="post">
+              <input type="text" name="user" placeholder="username" required class="member">
+              <input type="password" name="pass" placeholder="password" required class="member">
+              <button class="btn btn-info">Login</button>
+            </form>
+            <span class="m-member">
+              Not a member? 
+              <span class="m-register" onclick="document.getElementById('reg').style.display='block'">
+                <span class="register-garne-button">
+                  Register here
+                </span>
+              </span>
+            </span>
+           <div id="reg" class="introduce">
+          <div class="popup-intro animate need-bg">
+            <div class="topcontainer">
+              <span onclick="document.getElementById('reg').style.display='none'" class="close white-close">&times;</span> 
+            </div>
+            <section class="intro-para text-justify">
+              <div class="loginn">
+                <div class="ser"> 
+                  <img src="img/user.png" alt="avtar" class="img-responsive img-circle avtar-img">
+                </div>
+                
+                <div class="login-container" style="width: 90%; margin: auto;">
+                  <h4 class="text-center"> Register Here </h4>
+                  <form method="post" enctype="multipart/form-data" >
+                    <div class="this-is-login-name">
+                      <div class="log-one">
+                        <input type="text" name="fname" placeholder="First Name" required class="name"> 
+                      </div>
+                      <div class="log-one">
+                        <input type="text" name="lname" placeholder="Last Name" required class="name">
+                      </div>
+                    </div>
+                    <div class="this-is-login-requires">
+                      <input type="email" name="email" placeholder="Email" required class="requires-full">
+                      <div class="radio">
+                        <div class="s-radio">
+                          <input type="radio" name="gender" value="male">Male
+                        </div>
+                        <div class="s-radio radio-female">
+                          <input type="radio" name="gender" value="female">Female
+                        </div>
+                      </div>
+                      <div class="reveal">
+                        <input type="password" name="password" placeholder="Password" required class="requires-full" id="type-pass">
+                    
+                        <img src="img/hidden-eye.png" alt="eye" class="eye" id="eye" onclick="changeimg()">
+                      </div>
+                      <input type="password" name="password" placeholder="Confirm Password" required class="requires-full c-pass" id="c-pass">
+                      Birth Date:
+                      <div class="date">
+                         <span style="color:#fff;">Year</span>
+                        <select>
+                          <option value="1990">1990</option>
+                          <option value="1991">1991</option>
+                          <option value="1992">1992</option>
+                          <option value="1993">1993</option>
+                          <option value="1994">1994</option>
+                          <option value="1995">1995</option>
+                          <option value="1996">1996</option>
+                          <option value="1997">1997</option>
+                          <option value="1998">1998</option>
+                          <option value="1999">1999</option>
+                          <option value="2000">2000</option>
+                          <option value="2001">2001</option>
+                          <option value="2002">2002</option>
+                          <option value="2003">2003</option>
+                          <option value="2004">2004</option>
+                          <option value="2005">2005</option>
+                          <option value="2006">2006</option>
+                          <option value="2007">2007</option>
+                          <option value="2008">2008</option>
+                          <option value="2009">2009</option>
+                          <option value="2010">2010</option>
+                        </select>
+                        <span style="color:#fff">Month</span>
+                        <select>
+                          <option value="Jan">Jan</option>
+                          <option value="Feb">Feb</option>
+                          <option value="Mars">Mars</option>
+                          <option value="April">April</option>
+                          <option value="May">May</option>
+                          <option value="June">June</option>
+                          <option value="July">July</option>
+                          <option value="Aug">Aug</option>
+                          <option value="Sept">Sept</option>
+                          <option value="Oct">Oct</option>
+                          <option value="Nov">Nov</option>
+                          <option value="Dec">Dec</option>
+                        </select>
+                        <span style="color: #fff"> Day</span> 
+                        <select>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                        </select>
+                      </div>
+                      Upload Profile Photo
+                      <input type="file" name="pp" required style="background:unset;border: 0!important;padding: 0px;">
+                      <p>
+                        By clicking Register, you agree to our <a href="#">Terms</a>,<a href="#">Data  Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.
+                      </p>
+                    </div>
+                    <input type="submit" name="register" value="Register" class="member-register">
+                  </form>
+                </div>    
+              </div>
+            </section>
+          </div>
+
+        </div>
+
+
+
+
+
+
+            <div class="subscribe text-center">
+              <h4>Subscribe for regular updates</h4>
+              <form method="post">
+                <input type="email" name="em-4-u" class="em-4-u" placeholder="Your Email">
+                <input type="submit" name="submit" value="Subscribe" class="em-4-u-s">
+                
+              </form> 
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="f325c6a">
+        <div class="container">
+          <div class="lang-cont">
+            <div class="lang">
+              <h3>Language | भाषा</h3>
+              <ul class="lang">
+                <li><a href="#">नेपाली</a></li>
+                <li><a href="#">English(active)</a></li>
+                <li><a href="#">Español</a></li>
+                <li><a href="#">Português (Brasil)</a></li>
+                <li><a href="#">العربية</a></li>
+                <li><a href="#">More</a></li>
+              </ul>
+            </div>
+            <div class="cont">
+              <h3>Contact Us <i class="fab fa-linux"></i></h3>
+              <i class="fa fa-phone"></i> 9861437533<br>
+              <i class="fas fa-envelope"></i> info@rashikshrestha.com.np<br>
+              <i class="fas fa-map-marker-alt"></i> Madhyapur thimi-4<br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer text-center">
+            &copy; Copyright 2018 raseek. All Rights Reserved
+
+       </div>
+    </section>
+    <a href="#topmost" onclick="top()" id="topping" class="topping nav-hide" title="go go go topping"><i class="fas fa-angle-up hitler"></i></a>
+
+    
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scoll.js"></script>
+    <script type="text/javascript" src="js/particles.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script>
+      function load(){        
+          setTimeout(
+              function(){
+                document.getElementById('shift').style.display='block'; 
+                $('#shift').classList.add("bounceInUp");
+                  
+              }, 3000);
+          setTimeout(
+              function(){
+                document.getElementById('firstmai').style.display='none'; 
+               
+                  
+              }, 0);
+          setTimeout(
+              function(){
+                document.getElementById('scss').style.display='none'; 
+               
+                  
+              }, 0);
+          
+      }
+  </script>
+  <script src="https://kit.fontawesome.com/f0ae8fef96.js"></script>
+
+  </body>
+</html>
